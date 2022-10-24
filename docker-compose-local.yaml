@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pseudo-app:
+    container_name: pseudo-app
+    build:
+      context: .
+    ports:
+      - 5000:5000

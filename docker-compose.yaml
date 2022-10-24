@@ -1,0 +1,6 @@
+version: '3'
+services:
+  pseudo-app:
+    image: lukasljl/pseudo-project:0.1
+    ports:
+      - 5000:5000
