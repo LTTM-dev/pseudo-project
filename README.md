@@ -18,3 +18,13 @@ docker compose -f docker-compose-local-yaml up -d --build
 ```
 
 ### Nix
+To develop on your local system use:
+```bash
+nix develop
+```
+
+To build a docker image use:
+```bash
+nix build
+docker load < result  
+```
