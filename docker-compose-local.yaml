@@ -1,6 +1,8 @@
 version: '3'
 services:
   pseudo-app:
-    image: lukasljl/pseudo-project:0.1
+    container_name: pseudo-app
+    build:
+      context: .
     ports:
       - 5000:5000
