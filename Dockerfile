@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-LABEL maintainer "LTTM-DEV"
+LABEL maintainer = "LTTM-DEV"
 
 WORKDIR /pseudo-project
 
