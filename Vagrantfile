@@ -6,8 +6,8 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.box = "archlinux/archlinux"
-  config.vm.box_check_update = false
+  config.vm.box = "ubuntu/focal64"
+  config.vm.box_check_update = true
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 5000, host: 5000
 
   # Files
-  config.vm.synced_folder "src/", "/var/www/website/"
+  config.vm.synced_folder "src/", "/data"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -33,6 +33,6 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provision "shell", inline: <<-SHELL
-    pacman -S python3
+    apt install -y python3 pip3
   SHELL
 end
