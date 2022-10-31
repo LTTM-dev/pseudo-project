@@ -67,6 +67,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y python3-pip
+  SHELL
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
     cd /data
     pip install -r requirements.txt --no-cache
     python3 -m flask run --host=0.0.0.0
