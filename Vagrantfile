@@ -71,8 +71,8 @@ Vagrant.configure("2") do |config|
   SHELL
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    cd /data
-    pip install -r requirements.txt --no-cache
+    pip install -r /data/requirements.txt --no-cache
+    export FLASK_APP=/data/app.py
     python3 -m flask run --host=0.0.0.0
   SHELL
 end
