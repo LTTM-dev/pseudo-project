@@ -17,6 +17,13 @@ If you want you can build by your self and start it via docker compose.
 docker compose -f docker-compose-local-yaml up -d --build
 ```
 
+### Vagrant with Ansible
+You can use Vagrant to provision a local VM to run this application.
+Start the provisioned VM with:
+```bash
+vagrant up
+```
+
 ### Nix
 To develop on your local system use:
 ```bash
