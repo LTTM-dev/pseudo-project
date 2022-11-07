@@ -23,7 +23,7 @@
         {
             devShells.default =
                 pkgs.mkShell {
-                    buildInputs = [pythonPackages.flask];
+                    buildInputs = [pythonPackages.flask pythonPackages.gunicorn];
                 };
 
 
@@ -33,7 +33,7 @@
 
                 copyToRoot = pkgs.buildEnv {
                     name = "image-root";
-                    paths = [ 
+                    paths = [
                         pythonPackages.flask
                         files               
                     ];
