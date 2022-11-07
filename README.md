@@ -35,3 +35,13 @@ To build a docker image use:
 nix build
 docker load < result  
 ```
+
+## Develop
+To run flask locally use:
+```bash
+flask run --host=0.0.0.0
+```
+To run this app locally with an WSGI server(recommended for production):
+```bash
+gunicorn -w 4 -b 0.0.0.0:5000 app:app
+```
