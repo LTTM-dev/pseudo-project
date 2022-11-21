@@ -26,6 +26,7 @@
                     buildInputs = [
                         pythonPackages.flask
                         pythonPackages.gunicorn
+                        pkgs.vagrant
                         pkgs.terraform
                     ];
                 };
