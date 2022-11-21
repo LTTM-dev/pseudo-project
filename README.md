@@ -45,3 +45,12 @@ To run this app locally with an WSGI server(recommended for production):
 ```bash
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
+
+## Deployment
+To deploy our container to Azure use the following command:
+```bash
+terraform init
+terraform apply
+```
+Note: Make sure to have azure cli installed with your account logged in.
+
