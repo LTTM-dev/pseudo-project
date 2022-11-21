@@ -23,7 +23,12 @@
         {
             devShells.default =
                 pkgs.mkShell {
-                    buildInputs = [pythonPackages.flask pythonPackages.gunicorn];
+                    buildInputs = [
+                        pythonPackages.flask
+                        pythonPackages.gunicorn
+                        pkgs.vagrant
+                        pkgs.terraform
+                    ];
                 };
 
 
