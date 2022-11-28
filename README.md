@@ -46,6 +46,11 @@ To run this app locally with an WSGI server(recommended for production):
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
 
+To run the tests use:
+```bash
+python -m pytest -v
+```
+
 ## Deployment
 To deploy our container to Azure use the following command:
 ```bash
