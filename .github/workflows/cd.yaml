@@ -1,4 +1,5 @@
-name: Testing
+name: Deployment
+
 
 on:
   push:
@@ -44,4 +45,4 @@ jobs:
         app-name: 'pseudo-app'
         slot-name: 'production'
         publish-profile: ${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
-        images: ${{secrets.DOCKER_HUB_USERNAME}}/pseudo-project:${{ github.sha }}'
+        images: ${{secrets.DOCKER_HUB_USERNAME}}/pseudo-project:${{ github.sha }}
