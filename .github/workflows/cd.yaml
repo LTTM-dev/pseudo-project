@@ -15,7 +15,7 @@ jobs:
     - name: Clone Repo
       uses: actions/checkout@v3
 
-    - name: Login to GitHub Container Registry
+    - name: Login to Docker Container Registry
       uses: docker/login-action@v2
       with:
         username: ${{secrets.DOCKER_HUB_USERNAME }}
