@@ -27,6 +27,7 @@
                         pythonPackages.flask
                         pythonPackages.gunicorn
                         pythonPackages.pytest
+                        pythonPackages.prometheus-flask-exporter
                         pkgs.vagrant
                         pkgs.terraform
                     ];
